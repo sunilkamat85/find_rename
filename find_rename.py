@@ -3,5 +3,6 @@ import glob
 for name in glob.glob('/root/shri/distribution/folds/*'):
    if os.path.isdir(name):
          for i in glob.glob('{}/*'.format(name)):
+              new_name = os.path.split(i)[1].split('-')[0] + '.latest.ear'
               print(i)
-              print("-----------------")
+              print(new_name)
